@@ -1343,7 +1343,8 @@ void dhashm()
     if(a[0]=="--help")
     {
           cout<<"Only use for legal peposuses"<<endl;
-    cout<<"To shutdown your own computer use '--shutdown'\nTo get ip of a site use '--ip' and then enter your site"<<endl<<"Note you should run this in powershell to bypass anti-virus"<<endl;
+    cout<<"To shutdown your own computer use '--shutdown'\nTo get ip of a site use '--ip' and then enter your site"<<endl;
+    exit(1);
     }
     else if(a[0]=="--shutdown")
     {
@@ -1354,6 +1355,7 @@ void dhashm()
         string ip;
         cin>>ip;
         system(("ping "+ip).c_str());
+        exit(1);
     }
     else
     {
