@@ -1,4 +1,5 @@
 # hashm
+# Still working on 'hashm --c++' , 'hashm --md5' and 'hashm --sha1' Thank you for your paitience
 hashm is created by r.n completely using c++
 For help of this program use 'hashm --help'
 FOR THE FIRST COMMAND you need to type 'hashm' for the others which comes with '--direct' or '--main' YOU DO NOT NEED TO TYPE 'hashm'
@@ -11,9 +12,3 @@ and to create users use 'hashm --register [username] [password] [repeated passwo
 I had them saved as cool code along time ago without any sources hence i do not have the link and source.
 # the code only works in windows 
 NOTE: Everything else is written by yours truly.
-
-
-
-
-
-ps: i put A LOT of effort in this code. and I am sorry if the code is a bit messed up. I am NOT a pro at c++ and it is 3 months that i have started learning it.
