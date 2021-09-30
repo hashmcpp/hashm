@@ -1,4 +1,4 @@
-# hashm
+# hashm (made by ryan nayeraini)
 # Still working on 'hashm --c++' , 'hashm --md5' and 'hashm --sha1' Thank you for your paitience
 hashm is created by r.n completely using c++
 For help of this program use 'hashm --help'
