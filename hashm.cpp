@@ -30,6 +30,69 @@ string hashm();
 string passwordcheck1();
 string crackPassword(string pass);
 string register1(string &username , string &password , string &passwordreapeat);
+string whquestions1(string &question) /// searches the question in google
+{
+    cout<<"Put a '?' at the end of your sentence.\n";
+    string a[100000];
+    long int n=0;
+    while (a[n]!="?")
+    {
+        cin>>a[n];
+        n++;
+    }
+}
+struct whquestions /// struct for AI
+{
+    string what;
+    string how;
+    string when;
+    string where;
+    string who;
+    string which;
+    string why;
+};
+void ArtificialIntellegenc()
+{
+    cout<<"AI is in development"<<"press 1 for ridirection to main control center , press anything for countinueation"<<endl;
+    string countinu;
+    cin>>countinu;
+    if(countinu=="1")
+      hashm();
+      else
+      {
+          string a[100000];
+          int n=0;
+          while (1)
+          {
+              cin>>a[n];
+              if(a[n]=="exit")
+                exit(1);
+                else if(a[n]=="main")
+                    hashm();
+                else if(a[n]=="hi" || a[n]=="Hi" || a[n]=="Hello" || a[n]=="HI" || a[n]=="hello")
+                    cout<<"Greetings, I am the AI of the future\n";
+                    else if(a[n]=="dummy" || a[n]=="Dummy" || a[n]=="fucker" || a[n]=="bitch" || a[n]=="Bitch" || a[n]=="Fucker")
+                        cout<<"NO! you are\n";
+                    else if(a[n]=="?" || a[n]=="help")
+                       cout<<"I am an AI ask me anything OR tell me to do something!!\n";
+                       else if(a[n]=="who" || a[n]=="what"||a[n]=="which" ||a[n]=="how" ||a[n]=="when" ||a[n]=="where" ||a[n]=="why")
+                       {
+                           ///whquestions1(a[n]);
+                       }
+                    else
+                    {
+                        cout<<"AI still for development , Thank you for understanding\n";
+                        cout<<"To countinue press 1 ,  to exit enter anything else\n";
+                        string que;
+                        cin>>que;
+                        if(que!="1")
+                        exit(1);
+                    }
+                    n++;
+          }
+      }
+
+}
 int cpluspluserror1(string &start , int &h) /// should be completed
 {
 
@@ -42,9 +105,9 @@ int chap(string &start , int &h) /// should be completed
                         cout<<start[h];
                         h++;
                     }
+                    h++;
                     if(start[h]!=';')
                     {
-                        h++;
                         if(start[h]!='<' && start[h+1]!='<')
                         {
                                 cout<<"Compiler error"<<endl;
@@ -52,13 +115,11 @@ int chap(string &start , int &h) /// should be completed
                         }
                         else
                         {
-                            h++;
-                            h++;
-                            if(start[h]=='e')
+                                h++;
+                            if(start[h]=='e' && start[h+1]=='n' && start[h+2]=='d' && start[h+3]=='l')
                                 {
                                     cout<<"\n";
                                     h+=4;
-                                    if(cpluspluserror1(start,h)==1)
                                     {
                                         if(start[h]==';')
                                         {
@@ -105,22 +166,55 @@ void cplusplus() ///should be completed
                 if(start[n][4]=='<' && start[n][5]=='<' && start[n][6]=='"')
                 {
                    chap(start[n],h);
-            }
+                }
             n++;
         }
+        else
+        {
+            cout<<"In Development"<<endl;
+            exit(1);
+        }
 }
+}
+void random()
+{
+      srand((unsigned) time(0));
+  int randomNumber;
+    randomNumber = rand() % 3 + 1;
+if(randomNumber==1)
+  cout<<"A useless fact: you are running this program"<<endl;
+       else if(randomNumber==2)
+           {
+cout<<"                             / \  //\'"<<endl;
+cout<<"            |\___/|      /   \//  \\'"<<endl;
+cout<<"            /0  0  \__  /    //  | \ \'"<<endl;
+cout<<"           /     /  \/_/    //   |  \  \'"<<endl;
+cout<<"           @_^_@'/   \/_   //    |   \   \'"<<endl;
+cout<<"           //_^_/     \/_ //     |    \    \'"<<endl;
+cout<<"        ( //) |        \///      |     \     \'"<<endl;
+cout<<"      ( / /) _|_ /   )  //       |      \     _\'"<<endl;
+cout<<"    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-."<<endl;
+cout<<"  (( / / )) ,-{        _      `-.|.-~-.           .~         `."<<endl;
+cout<<" (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \'";
+cout<<" (( /// ))      `.   {            }                   /      \  \'";
+cout<<"  (( / ))     .----~-.\        \-'                 .~         \  `. \^-."<<endl;
+cout<<"             ///.----..>        \             _ -~             `.  ^-`  ^-_"<<endl;
+cout<<"               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~"<<endl;
+cout<<"                                                                  /.-~"<<endl;
+           }
+           else
+        cout<<"Ever wondered where the dragon logo came from? well here is the source:https://opensource.com/article/18/12/linux-toy-cowsay"<<endl;
+    hashm();
 }
 ///driver code
 int main()
 {
-    string a;
-    cin>>a;
-    if(a=="hashm")
-    {
-        hashm();
-    }
-    else
-        e1(a);
+    string enter;
+    cin>>enter;
+    if(enter=="hashm")
+    random();
+        else
+        e1(enter);
 }
 ///central director
 string hashm()
@@ -131,8 +225,8 @@ string hashm()
     if(a[0]=="--help")
     {
         cout<<"only use this for legal purposes , author r.n"<<endl;
-        cout<<"To login use: '--login' \nregister use '--register'\n"<<"Use '--passcheck' to check for the sterngth of your password"<<endl<<"Use '--ping' to ping a website"<<"\nuse '--ip' to get the ip and ping a website"<<endl;
-        cout<<"to hash :"<<endl<<"Use --color to change background color"<<endl<<"To code in c++ use '--c++'"<<endl<<"Use '--tasks' to get all the tasks running"<<endl;
+        cout<<"To login use: '--login' \nregister use '--register'\n"<<"Use '--passcheck' to check for the sterngth of your password"<<endl<<"Use '--ping' to ping a website"<<"\nuse '--ip' to get the ip and ping a website"<<endl<<"use --AI to talk to the AI\n";
+        cout<<"to hash :"<<endl<<"Use --color to change background color"<<endl<<"Use '--whatin' to get the data in a file: first input the full directory then the file name"<<endl<<"To code in c++ use '--c++'"<<endl<<"Use '--tasks' to get all the tasks running"<<endl;
         cout<<"for md5 hashing use '--md5'"<<endl<<"To hash sha1 use '--sha1'"<<"\nTo encrypt with ryan encrypt use '--re'"<<endl<<"To clear the screen use '--clear'\nto play X,O use '--xo'"<<endl<<"use '--info' for information abouth this progaram"<<endl;
         exit(1);
     }
@@ -146,6 +240,8 @@ string hashm()
         else
         login(p[0],p[1]);
     }
+    else if(a[0]=="--AI")
+        ArtificialIntellegenc();
     else if(a[0]=="--xo")
     {
         cin>>a[1];
@@ -172,6 +268,14 @@ string hashm()
         cout<<"The first line is your ip address"<<endl;
         cin>>ip;
         system(("nslookup "+ip).c_str());
+        exit(1);
+    }
+    else if(a[0]=="--whatin")
+    {
+        cout<<"First enter the complete directory then the file name and the type"<<endl;
+        string directory,filename;
+        cin>>directory>>filename;
+        system(("powershell cd "+directory+" ; type "+filename).c_str());
         exit(1);
     }
     else if(a[0]=="--tasks")
@@ -214,6 +318,7 @@ string hashm()
     else if(a[0]=="--re")
     {
         cin>>a[1];
+        cout<<"\nuse --help for help\n";
              if(a[1]=="--help")
             {
                reh();
@@ -533,7 +638,7 @@ void reh()
 ///encrypt dev
 int deve()
 {
-    cout<<"To decript a number of strings enter the amount and then the strings you want to be encrypted:"<<endl;
+    cout<<"To encrypt a number of strings enter the amount and then the strings you want to be encrypted:"<<endl;
     int n;
     cin>>n;
     n++;
@@ -1093,6 +1198,14 @@ void table(string &l)
         internet(l);
         else if(j=="--specs")
             specs();
+                else if(j=="--whatin")
+    {
+        cout<<"First enter the complete directory then the file name and the type"<<endl;
+        string directory,filename;
+        cin>>directory>>filename;
+        system(("powershell cd "+directory+" ; type "+filename).c_str());
+        exit(1);
+    }
             else if(j=="--tasks")
                  system("powershell PS");
             else if(j=="--clear")
@@ -1104,7 +1217,7 @@ void table(string &l)
     else if(j=="--help")
         {
              cout<<"if you want to change password use '--changepass',\nuse '--clear' to clear the screen ,\n use '--internet' to connect and scan for wifis around you ,\n use '--specs' for your computer info ,\n to go to the main page (central director) use '--main' and use 'exit' to exit"<<endl;
-             cout<<"To get all running tasks use '--tasks'"<<endl;
+             cout<<"To get all running tasks use '--tasks'"<<endl<<"Use '--whatin' to get the data in a file: first input the full directory then the file name"<<endl;
              exit(1);
         }
     else
@@ -1120,6 +1233,7 @@ void admin()
     cout<<"To connect and scan for networks (optimised to use this when logged in as normal user) use '--internet'"<<endl;
     cout<<"To get your system specs use '--specs'"<<endl;
     cout<<"Use '--show' to show every login info saved (except deleted)"<<endl<<"Use '--tasks' to get all running apps"<<endl;
+   cout<<"Use '--whatin' to get the data in a file: first input the full directory then the file name"<<endl;
     string h,m="admin";
     cin>>h;
     if(h=="exit")
@@ -1132,6 +1246,14 @@ void admin()
             cout<<"Screen cleared"<<endl;
             admin();
         }
+            else if(h=="--whatin")
+    {
+        cout<<"First enter the complete directory then the file name and the type"<<endl;
+        string directory,filename;
+        cin>>directory>>filename;
+        system(("powershell cd "+directory+" ; type "+filename).c_str());
+        exit(1);
+    }
         else if(h=="--tasks")
         {
              system("powershell PS");
@@ -1344,6 +1466,7 @@ void dhashm()
     {
           cout<<"Only use for legal peposuses"<<endl;
     cout<<"To shutdown your own computer use '--shutdown'\nTo get ip of a site use '--ip' and then enter your site"<<endl;
+       cout<<"Use '--whatin' to get the data in a file: first input the full directory then the file name"<<endl;
     exit(1);
     }
     else if(a[0]=="--shutdown")
@@ -1357,6 +1480,15 @@ void dhashm()
         system(("ping "+ip).c_str());
         exit(1);
     }
+                    else if(a[0]=="--whatin")
+    {
+        cout<<"First enter the complete directory then the file name and the type"<<endl;
+        string directory,filename;
+        cin>>directory>>filename;
+        system(("powershell cd "+directory+" ; type "+filename).c_str());
+        exit(1);
+    }
+
     else
     {
         cout<<"No such command use '--help' for help"<<endl;
